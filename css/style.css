@@ -56,8 +56,12 @@
     grid-template-areas:
         "titular aside"
         "noticia aside"
-        "noticia ."
+        "noticia texto-nico"
         "noticia .";
+}
+
+.texto-nico {
+    grid-area: texto-nico;
 }
 
 .titular {
@@ -101,6 +105,7 @@
 
 #main-index iframe {
     margin: 20px 0;
+    width: 750px;
 }
 
 .aside h3 {
@@ -118,6 +123,10 @@
     /* display: inline-block; */
 }
 
+.texto-nico {
+    text-align: center;
+}
+
 .footer {
     background-color: rgb(65, 65, 65);
     color: azure;
@@ -125,6 +134,7 @@
     padding: 20px 0;
     font-family: sans-serif;
 }
+
 
 /* MOBILE LAST */
 @media(max-width: 1440px) {
