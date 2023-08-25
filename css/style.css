@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    max-width: 900px;
+    margin: auto;
+}
+
+.header img {
+    width: 250px;
+}
+
+.nav {
+    text-transform: uppercase;
+    padding: 20px;
+
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav ul li {
+    margin: 0 20px;
+}
+
+.nav a {
+    color: orangered;
+    text-decoration: none;
+}
+
+#main-index {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* max-width: 800px; */
+    max-width: 70vw;
+    margin: auto;
+
+    /* GRID */
+    display: grid;
+    /* El procentaje es del max-width definido */
+    grid-template-columns: 70% 30%;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    gap: 0px 0px;
+    grid-template-areas:
+        "titular aside"
+        "noticia aside"
+        "noticia ."
+        "noticia .";
+}
+
+.titular {
+    grid-area: titular;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.noticia {
+    grid-area: noticia;
+}
+
+
+#main-index .categoria {
+    background-color: #DD3333;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 10px;
+    display: inline;
+    padding: 5px 10px;
+    border-radius: 5px;
+
+}
+
+#main-index h1 {
+    /* Para separaciones entre cajas se suele usar MARGIN */
+    margin: 20px 0;
+}
+
+#main-index img {
+    margin: 30px 0;
+}
+
+#main-index p {
+    margin: 20px 0;
+}
+
+#main-index iframe {
+    margin: 20px 0;
+}
+
+.aside h3 {
+    background-color: rgb(41, 41, 41);
+    color: azure;
+    padding: 15px;
+}
+
+.aside p {
+    margin: 20px 0;
+}
+
+.aside .email {
+    margin: 10px 0;
+    /* display: inline-block; */
+}
+
+.footer {
+    background-color: rgb(65, 65, 65);
+    color: azure;
+    text-align: center;
+    padding: 20px 0;
+    font-family: sans-serif;
+}
+
+/* MOBILE LAST */
+@media(max-width: 1440px) {
+    .aside {
+        max-width: 100vw;
+        margin: auto;
+        /* display: none; */
+    }
+
+    #main-index {
+
+        /* max-width: 70vw;
+        margin: auto; */
+
+        /* GRID */
+        /* display: grid; */
+        /* El procentaje es del max-width definido */
+        grid-template-columns: 100%;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+        /* gap: 0px 0px; */
+        grid-template-areas:
+            "titular"
+            "noticia"
+            "noticia"
+            "aside"
+            "aside";
+
+    }
+}
